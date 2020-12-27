@@ -1,11 +1,11 @@
-package viev;
+package utils.tmp;
+
+import viev.Converter;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.util.Arrays;
-
 
 public class ViveListener implements ItemListener {
     private final JComboBox categories;
@@ -13,18 +13,26 @@ public class ViveListener implements ItemListener {
     private final TextField firstValue;
     private final TextField secondValue;
     private final JComboBox secondCategoriesValue;
+    private final Converter converter;
 
 
-    public ViveListener(JComboBox categories, JComboBox firstCategoriesValue, JComboBox secondCategoriesValue, TextField firstValue, TextField secondValue) {
+    public ViveListener(JComboBox categories, JComboBox firstCategoriesValue, JComboBox secondCategoriesValue, TextField firstValue, TextField secondValue,Converter converter) {
         this.categories = categories;
         this.firstCategoriesValue = firstCategoriesValue;
         this.secondCategoriesValue = secondCategoriesValue;
         this.firstValue = firstValue;
         this.secondValue = secondValue;
-
+        this.converter = converter;
     }
 
     public void itemStateChanged(ItemEvent e) {
+        String[] categoriesItems = {
+                "Time",
+                "Weight",
+                "Temperature",
+                "Volume",
+                "Length"
+        };
         if (categories.getSelectedItem() == "Time") {
             String[] timeArray = {
                     "Sec",
@@ -77,7 +85,7 @@ public class ViveListener implements ItemListener {
             }
         } else if (categories.getSelectedItem() == "Volume") {
             String[] volumeArray = {
-                    "L",
+                    "l",
                     "m^3",
                     "gallon",
                     "pint",
@@ -110,6 +118,7 @@ public class ViveListener implements ItemListener {
                 secondCategoriesValue.addItem(lengthArray[i]);
             }
         }
+       double num1  = Double.parseDouble(firstValue.getText());
     }
 
 }
