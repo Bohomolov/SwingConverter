@@ -76,13 +76,12 @@ public class Converter extends JFrame {
 
         add(setValue);
         setValue.setBounds(95,60, 170 , 20);
-        add(resultValueLabel);
-        resultValueLabel.setBounds(285,60, 170 , 20);
-
         add(firstValue);
         firstValue.addActionListener(listener);
         firstValue.setBounds(95, 85, 170, 20);
 
+        add(resultValueLabel);
+        resultValueLabel.setBounds(285,60, 170 , 20);
         add(secondValue);
         secondValue.addActionListener(listener);
         secondValue.setBounds(285, 85, 170, 20);
@@ -94,16 +93,22 @@ public class Converter extends JFrame {
 
         add(helper);
         helper.setBounds(10, 165, 360,30);
+
         add(helper1);
         helper1.setBounds(10, 185, 480,30);
+
         add(helperTime);
         helperTime.setBounds(10, 205, 480,30);
+
         add(helperTemperature);
         helperTemperature.setBounds(10, 225, 480,30);
+
         add(helperWeight);
         helperWeight.setBounds(10, 245, 500,30);
+
         add(helperVolume);
         helperVolume.setBounds(10, 265, 540,30);
+
         add(helperLength);
         helperLength.setBounds(10, 285, 540,30);
     }

@@ -15,5 +15,5 @@ public class Constants {
     public static final String HELPER_TEXT_LENGTH = "\"Length\" can convert \"m\" to \"km\", \"mile\",\"nautical mile\",\"cable\",\"league\",\"foot\",\"yard\"";
     public static final String SET_VALUE = "Set value";
     public static final String RESULT_VALUE = "Result value";
-    public static final String INCORRECT_PARAMETERS = "Incorrect parameters. watch down";
+    public static final String INCORRECT_PARAMETERS = "Incorrect parameters.";
 }
